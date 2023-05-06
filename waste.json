@@ -1,0 +1,29 @@
+{
+  "wastelist": [
+    {
+      "id": 1,
+      "name": "Plastic Bottle",
+      "category": "Plastic"
+    },
+    {
+      "name": "Monitor",
+      "category": "E-Waste",
+      "id": 3
+    },
+    {
+      "name": "Food",
+      "category": "Organic",
+      "id": 5
+    },
+    {
+      "name": "Spoon",
+      "category": "Metal",
+      "id": 6
+    },
+    {
+      "name": "Plastic Bag",
+      "category": "Plastic",
+      "id": 7
+    }
+  ]
+}

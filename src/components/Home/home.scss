@@ -1,0 +1,89 @@
+.home-wrapper {
+
+    .section {
+        padding: 0 5rem;
+    }
+
+    .section-one {
+        height: 100vh;
+        background-image: url('../../assets/wallpaper_4.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        overflow-y: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        
+        .main-cover {
+            max-width: 600px;
+            color: #000000;
+            h1 {
+                line-height: 3.5rem;
+            }
+            h5 {
+                line-height: 2rem;
+            }
+        }
+
+        .main-button {
+            margin-top: 2.25rem;
+            .button-primary {
+                width: unset;
+                padding: 20px 32px;
+                text-decoration: none;
+                transition: 150ms ease-in-out;
+            }
+        }
+    }
+}
+
+.section-one:before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    background-image: inherit;
+    background-repeat: inherit;
+    background-size: cover;
+    background-position: center center;
+}
+
+.more-content {
+    background-color: white;
+    color: white;
+    height: 1000px;
+}
+
+@media (max-width: 575.98px) {
+    .home-wrapper {
+
+        .section {
+            padding: 0 1.25rem;
+        }
+
+        .section-one {
+            .main-cover {
+                h1 {
+                    line-height: 3rem;
+                }
+                h5 {
+                    font-size: 16px;
+                    line-height: 1.75rem;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .home-wrapper {
+        .section-one {
+            min-height: 100vh;
+        }
+    }
+
+}

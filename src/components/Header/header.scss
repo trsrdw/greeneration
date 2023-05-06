@@ -1,0 +1,76 @@
+.form-control {
+    border-radius: 0 !important;
+}
+
+.nav-wrapper {
+    position: relative;
+    .main-title {
+        color: #000000;
+    }
+    .shadow-nav {
+        padding: 17px 0 !important;
+        z-index: 999;
+        background-color: transparent !important;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        transition: 300ms ease-in-out;
+    }
+}
+
+.shadow-nav.active {
+    background-color: white !important;
+    box-shadow: 0px 0px 24px 0px rgba(0, 0, 0, .15) !important;
+    transition: 300ms ease-in-out;
+}
+
+.navbar-toggler {
+    //color: white !important;
+    border: none !important;
+    &:focus {
+        box-shadow: none !important;
+    }
+}
+
+.nav-link {
+    padding-left: 18px !important;
+    padding-right: 18px !important;
+    color: #000000;
+    &:hover {
+        color: #2f8e3c;
+    }
+}
+
+.nav-button {
+    background-color: #08a8cc;
+    color: white;
+    width: 120px;
+    font-weight: 600;
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 48px;
+    margin-left: 18px;
+    margin-right: 18px;
+
+    &:hover {
+        background-color: #0691b0;
+        color: white;
+    }
+
+    &:active, &:focus, &:visited {
+        color: white !important;
+    }
+}
+
+.navbar-nav .nav-link.active, .navbar-nav .show>.nav-link {
+    color: #3cae4b;
+    font-weight: 600;
+}
+
+@media (max-width: 575.98px) {
+    .nav-button {
+        margin-top: 1rem;
+    }
+}
