@@ -1,10 +1,10 @@
-# Getting Started with Waste Manager App
+## Getting Started with Waste Manager App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Login Credentials
+### Login Credentials
 
-email: Joan80@gmail.com (case sensitive)
+email: Joan80@gmail.com (case sensitive).
 password: iObG85Gg4xGiSjo
 
 ### Waste Data
