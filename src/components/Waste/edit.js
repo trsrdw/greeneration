@@ -15,7 +15,6 @@ export default function WasteEdit() {
         fetch("https://6453b11ae9ac46cedf2cd38a.mockapi.io/wastelist/" + wstid).then((res) => {
             return res.json();
         }).then((resp) => {
-            console.log(resp);
             setEditName(resp.name);
             setEditCategory(resp.category);
         }).catch((err) => {

@@ -29,10 +29,11 @@ export default function Login() {
                             (user) => user.email === email && user.password === password
                         );
                         if (foundUser) {
-                            setAuth({ email, password })
-                            setEmail('')
-                            setPassword('')
-                            navigate(from, { replace: true })
+                            setAuth({ email, password });
+                            localStorage.setItem("user", JSON.stringify(foundUser));
+                            setEmail('');
+                            setPassword('');
+                            navigate(from, { replace: true });
                         } else {
                             setErrorMsg('Invalid email or password');
                         }

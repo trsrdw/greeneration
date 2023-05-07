@@ -24,10 +24,6 @@ function App() {
           <Route path='/' element={<Home />} />
           <Route path='/login' element={<Login />} />
 
-          {/* <Route path='/wastelist' element={<WasteList />} />
-          <Route path='/wastelist/create' element={<WasteCreate />}></Route>
-          <Route path='/wastelist/edit/:wstid' element={<WasteEdit />}></Route> */}
-
           {/* protected routes */}
           <Route element={<RequireAuth />}>
             <Route path='/wastelist' element={<WasteList />} />

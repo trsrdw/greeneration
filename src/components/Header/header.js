@@ -13,6 +13,7 @@ export default function Header() {
 
     const logOut = async () => {
         setAuth({});
+        localStorage.clear();
         navigate("/");
     };
 
