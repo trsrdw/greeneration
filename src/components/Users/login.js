@@ -4,7 +4,6 @@ import { useNavigate, useLocation } from "react-router-dom";
 import { Button, Form, Alert } from "react-bootstrap";
 import useAuth from "../../hooks/useAuth";
 
-
 export default function Login() {
 
     const { setAuth } = useAuth();
@@ -26,7 +25,7 @@ export default function Login() {
                     .then((response) => response.json())
                     .then((data) => {
                         const foundUser = data.find(
-                            (user) => user.email === email && user.password === password
+                            (user) => user.email.toLowerCase() === email.toLowerCase() && user.password === password
                         );
                         if (foundUser) {
                             setAuth({ email, password });
