@@ -48,7 +48,7 @@ export default function WasteList() {
             method: "DELETE"
         }).then(() => {
             promptClose();
-            window.location.reload();
+            navigate("/wastelist");
         }).catch((err) => {
             setErrorMsg(err.message);
         })
