@@ -4,6 +4,6 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ### Login Credentials
 
-Email: Joan80@gmail.com (case sensitive).
+Email: Joan80@gmail.com__
 Password: iObG85Gg4xGiSjo
 

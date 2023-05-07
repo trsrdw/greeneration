@@ -2,6 +2,11 @@
 
     .section {
         padding: 0 5rem;
+        
+        
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
 
     .section-one {
@@ -11,16 +16,31 @@
         background-size: cover;
         background-position: center center;
         overflow-y: auto;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        
+
+        &::before {
+            z-index: -1;
+            background-image: inherit;
+            background-repeat: inherit;
+            background-size: cover;
+            background-position: center center;
+            &::before {
+                content: "";
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100vw;
+                height: 100vh;
+            }
+        }
+
         .main-cover {
             max-width: 600px;
             color: #000000;
+
             h1 {
                 line-height: 3.5rem;
             }
+
             h5 {
                 line-height: 2rem;
             }
@@ -28,6 +48,7 @@
 
         .main-button {
             margin-top: 2.25rem;
+
             .button-primary {
                 width: unset;
                 padding: 20px 32px;
@@ -36,26 +57,46 @@
             }
         }
     }
-}
 
-.section-one:before {
-    content: "";
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    z-index: -1;
-    background-image: inherit;
-    background-repeat: inherit;
-    background-size: cover;
-    background-position: center center;
+    .section-two {
+        .card {
+            box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+            border: none;
+            height: 400px;
+            display: flex;
+            justify-content: center;
+            .card-body {
+                flex: unset;
+            }
+        }
+    }
 }
 
 .more-content {
     background-color: white;
+}
+
+.footer-content {
+    padding: 3rem 5rem;
+    background-color: #08a8cc;
     color: white;
-    height: 1000px;
+
+    a {
+        text-decoration: none;
+        color: white;
+        &:hover {
+            color: #000000;
+        }
+    }
+
+    .copy-wrapper {
+        display: flex;
+        align-items: center;
+        margin-top: 2rem;
+        p {
+            margin: 0;
+        }
+    }
 }
 
 @media (max-width: 575.98px) {
@@ -70,18 +111,32 @@
                 h1 {
                     line-height: 3rem;
                 }
+
                 h5 {
                     font-size: 16px;
                     line-height: 1.75rem;
                 }
             }
         }
+
+        .section-two {
+            padding-top: 1.25rem;
+            padding-bottom: 1.25rem;
+        }
+    }
+
+    .footer-content {
+        padding: 3rem 1.25rem;
+
+        .col {
+            padding: 0;
+        }
     }
 }
 
 @media (min-width: 768px) {
     .home-wrapper {
-        .section-one {
+        .section {
             min-height: 100vh;
         }
     }
