@@ -22,11 +22,11 @@ export default function Login() {
         if (validateEmail(email) && validatePassword(password)) {
             try {
 
-                fetch('https://jsonplaceholder.typicode.com/users')
+                fetch('https://6453b11ae9ac46cedf2cd38a.mockapi.io/users')
                     .then((response) => response.json())
                     .then((data) => {
                         const foundUser = data.find(
-                            (user) => user.email === email && user.website === password
+                            (user) => user.email === email && user.password === password
                         );
                         if (foundUser) {
                             setAuth({ email, password })

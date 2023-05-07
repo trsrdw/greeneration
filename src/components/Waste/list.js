@@ -48,7 +48,7 @@ export default function WasteList() {
             method: "DELETE"
         }).then(() => {
             promptClose();
-            navigate("/wastelist");
+            setWasteData(wasteData.filter(item => item.id !== deleteId));
         }).catch((err) => {
             setErrorMsg(err.message);
         })
